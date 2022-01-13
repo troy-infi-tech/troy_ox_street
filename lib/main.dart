@@ -1,11 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:troy_ox_street/app/app.router.dart';
+import 'package:troy_ox_street/firebase_options.dart';
 
 import 'app/app.locator.dart';
 
-void main() {
+Future<void> main() async {
   setupLocator();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -16,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Troy OX Street',
       // If you've added the stacked_services package then set the navigatorKey, otherwise set
       // your own navigator key
       navigatorKey: StackedService.navigatorKey,
@@ -32,7 +38,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
     );
   }

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.troy_ox_street">
+    package="com.troylee.oxstreet">
    <application
         android:label="troy_ox_street"
         android:name="${applicationName}"

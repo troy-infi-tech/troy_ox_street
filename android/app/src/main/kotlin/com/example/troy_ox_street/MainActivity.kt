@@ -1,4 +1,4 @@
-package com.example.troy_ox_street
+package com.troylee.oxstreet
 
 import io.flutter.embedding.android.FlutterActivity
 
